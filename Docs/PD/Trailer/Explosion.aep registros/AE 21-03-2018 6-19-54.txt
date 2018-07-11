@@ -1,0 +1,12 @@
+El registro de procesamiento de Adobe After Effects v14.0 Windows 64 para el procesamiento del proyecto "Explosion.aep"
+
+ se inició en 21/03/2018 a las 6:19:54
+
+  21/03/2018 6:19:54: Iniciando composición "explosion".
+
+  Salida a: D:\WastedHorchata ART\TRAILER\ESCENAS\explosion.avi    21/03/2018 6:26:16: Composición finalizada "explosion".
+
+
+  Tiempo total transc.: 6 min, 22 s
+Registro cerrado en 21/03/2018 a las 6:26:16
+

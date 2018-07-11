@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.10.00">
+    <object class="AudioFile" id="{80026f97-3ced-41f0-906f-2f629bca0088}">
+        <property name="assetPath">
+            <value>P-P3EN_1.wav</value>
+        </property>
+        <property name="frequencyInKHz">
+            <value>44.0999985</value>
+        </property>
+        <property name="channelCount">
+            <value>1</value>
+        </property>
+        <property name="length">
+            <value>0.71981859410430837</value>
+        </property>
+        <relationship name="masterAssetFolder">
+            <destination>{2ef7257a-cf67-4ab9-a566-04316ad2c1a2}</destination>
+        </relationship>
+    </object>
+</objects>

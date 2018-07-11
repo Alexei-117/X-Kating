@@ -1,0 +1,28 @@
+<?xml version="1.0" standalone="no" ?>
+<!DOCTYPE project PUBLIC "-//audacityproject-1.3.0//DTD//EN" "http://audacity.sourceforge.net/xml/audacityproject-1.3.0.dtd" >
+<project xmlns="http://audacity.sourceforge.net/xml/" projname="interference_second_data" version="1.3.0" audacityversion="2.1.0" sel0="0.0000000000" sel1="0.5003416856" vpos="0" h="0.0000000000" zoom="381.7391304348" rate="48000.0" snapto="off" selectionformat="hh:mm:ss + milliseconds">
+	<tags>
+		<tag name="Software" value="Adobe Audition 4.0.0.1815 (XMPDocOpsTemporal:2008.11.05)"/>
+		<tag name="YEAR" value="2015-02-24T18:05:19+11:00"/>
+	</tags>
+	<wavetrack name="264934__theolm__vhs-startup" channel="0" linked="1" mute="0" solo="0" height="150" minimized="0" isSelected="1" rate="48000" gain="1.0" pan="0.0">
+		<waveclip offset="0.00000000">
+			<sequence maxsamples="262144" sampleformat="262159" numsamples="21477">
+				<waveblock start="0">
+					<simpleblockfile filename="e000083a.au" len="21477" min="-0.366707" max="0.514346" rms="0.016407"/>
+				</waveblock>
+			</sequence>
+			<envelope numpoints="0"/>
+		</waveclip>
+	</wavetrack>
+	<wavetrack name="264934__theolm__vhs-startup" channel="1" linked="0" mute="0" solo="0" height="150" minimized="0" isSelected="1" rate="48000" gain="1.0" pan="0.0">
+		<waveclip offset="0.00000000">
+			<sequence maxsamples="262144" sampleformat="262159" numsamples="21477">
+				<waveblock start="0">
+					<simpleblockfile filename="e0000172.au" len="21477" min="-0.36675" max="0.514295" rms="0.016408"/>
+				</waveblock>
+			</sequence>
+			<envelope numpoints="0"/>
+		</waveclip>
+	</wavetrack>
+</project>

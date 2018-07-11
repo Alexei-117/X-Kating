@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.10.00">
+    <object class="AudioFile" id="{2bb4b48f-8bf4-4755-93a0-4fa7a6ed784e}">
+        <property name="assetPath">
+            <value>P-P9ES_1.wav</value>
+        </property>
+        <property name="frequencyInKHz">
+            <value>44.0999985</value>
+        </property>
+        <property name="channelCount">
+            <value>1</value>
+        </property>
+        <property name="length">
+            <value>0.98684807256235829</value>
+        </property>
+        <relationship name="masterAssetFolder">
+            <destination>{2ef7257a-cf67-4ab9-a566-04316ad2c1a2}</destination>
+        </relationship>
+    </object>
+</objects>

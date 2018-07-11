@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.10.00">
+    <object class="AudioFile" id="{6e4f0755-3c16-4d99-ac7e-f6d9b2d6f2fe}">
+        <property name="assetPath">
+            <value>B-P5EN_1.wav</value>
+        </property>
+        <property name="frequencyInKHz">
+            <value>44.0999985</value>
+        </property>
+        <property name="channelCount">
+            <value>1</value>
+        </property>
+        <property name="length">
+            <value>0.82192743764172338</value>
+        </property>
+        <relationship name="masterAssetFolder">
+            <destination>{2ef7257a-cf67-4ab9-a566-04316ad2c1a2}</destination>
+        </relationship>
+    </object>
+</objects>

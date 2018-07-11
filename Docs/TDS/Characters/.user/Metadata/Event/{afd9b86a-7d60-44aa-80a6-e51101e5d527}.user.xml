@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.10.00">
+    <object class="Event" id="{afd9b86a-7d60-44aa-80a6-e51101e5d527}">
+        <property name="uiMaxMarkerTracksVisible">
+            <value>11</value>
+        </property>
+        <relationship name="uiLastParameterSelection">
+            <destination>{bbe9befe-ca96-4588-a022-d1a48e53fcb2}</destination>
+        </relationship>
+    </object>
+    <object class="MasterTrack" id="{8da16737-da60-43b4-b30c-3fb5ae86f851}"/>
+    <object class="MixerInput" id="{60bbc51f-9658-4cc4-948b-51104802044f}"/>
+    <object class="EventAutomatableProperties" id="{49745cbf-2db9-4c6b-81b0-eb96371011a0}"/>
+    <object class="MarkerTrack" id="{a83445da-a264-45d3-a1a6-05405ce3e244}"/>
+    <object class="MarkerTrack" id="{e291fe44-becf-432e-b9e0-53d1a14d7f95}"/>
+    <object class="MarkerTrack" id="{cdc893c9-4593-4eba-9d0c-f44e655638bb}"/>
+    <object class="MarkerTrack" id="{7fbfd39e-f73d-4754-a8a4-1001cb17aba2}"/>
+    <object class="MarkerTrack" id="{b591bc37-6f40-473f-9968-8b1ae192be6f}"/>
+    <object class="MarkerTrack" id="{3deda607-498e-4659-a2fe-6c2a7c8b4559}"/>
+    <object class="MarkerTrack" id="{5d9fb30d-bc2f-464b-b9c4-32c21040fe45}"/>
+    <object class="MarkerTrack" id="{c1a98002-24fb-4d3d-95aa-2a269f7f28ad}"/>
+    <object class="MarkerTrack" id="{e970d601-59db-4650-bb83-1e2947661ebd}"/>
+    <object class="MarkerTrack" id="{bf7ee5d5-5ffb-4f73-bafd-0e07122abc12}"/>
+    <object class="MarkerTrack" id="{b93441ad-a3e1-4ab8-ad19-17cd9ccc8221}"/>
+    <object class="GroupTrack" id="{1d5b5dc2-c75c-40a6-853b-2d932049d19a}"/>
+    <object class="Timeline" id="{bbe9befe-ca96-4588-a022-d1a48e53fcb2}">
+        <property name="uiLastRulerScaleRatio">
+            <value>0.00083018867924528267</value>
+        </property>
+    </object>
+    <object class="ParameterProxy" id="{9400c14c-9063-4733-b3e2-785b41e6adca}">
+        <property name="uiLastRulerScaleRatio">
+            <value>0.00082034454470877774</value>
+        </property>
+    </object>
+    <object class="EventMixerMaster" id="{85d164d4-f13b-4bc3-bba6-2b55be105c65}">
+        <relationship name="input">
+            <destination>{720fe38a-84b1-4df4-8384-71948f674627}</destination>
+        </relationship>
+    </object>
+    <object class="TransitionSourceSound" id="{420b3ded-c5a4-463f-b880-237604d1fc75}"/>
+    <object class="TransitionDestinationSound" id="{fe758653-5924-4b4c-bcd9-363cb77271d6}"/>
+    <object class="MixerBusEffectChain" id="{5c879cce-a039-4a89-acd8-cb0f71ea2d85}"/>
+    <object class="MixerBusPanner" id="{bb6f9f35-7fc2-4f89-b28c-2324f101f550}"/>
+    <object class="SingleSound" id="{47d64cee-6fe2-43c9-8912-ac942c5dc743}"/>
+    <object class="SingleSound" id="{7b6d3466-c9c8-4c94-ad87-e7dde951e2b5}"/>
+    <object class="TransitionSourceSound" id="{532f6811-daa4-4b4d-a6e8-35cf2ad46e79}"/>
+    <object class="TransitionDestinationSound" id="{28779f6f-6f99-4cd9-9492-0378c68c8d6e}"/>
+    <object class="EventMixerGroup" id="{720fe38a-84b1-4df4-8384-71948f674627}"/>
+    <object class="NamedMarker" id="{31a81ace-94ae-4d94-8774-b55e90d9483d}"/>
+    <object class="NamedMarker" id="{6d00125d-d3ac-47bd-aeaa-298715830dac}"/>
+    <object class="NamedMarker" id="{35540162-b586-4b8b-9535-983c7970a101}"/>
+    <object class="NamedMarker" id="{5734a632-720b-4c7b-bc9c-a0534aa2bea0}"/>
+    <object class="NamedMarker" id="{e12fb5fa-67f1-48b0-a224-cf1b5a1bb584}"/>
+    <object class="NamedMarker" id="{fc42df72-15a4-4e63-9351-3327c50a06d0}"/>
+    <object class="NamedMarker" id="{f1a2d029-dbe6-492a-bd39-c89b56c7bd5a}"/>
+    <object class="NamedMarker" id="{f1659aa4-b1cc-42cc-ab19-a65dabf6ff25}"/>
+    <object class="NamedMarker" id="{36d0a1b6-1d07-4e3d-8dc8-7c4e8a41c625}"/>
+    <object class="TransitionMarker" id="{4d5466b3-645b-4e90-b411-082d6247e5f1}"/>
+    <object class="TransitionMarker" id="{35381379-b63b-4234-baae-753325ae934b}"/>
+    <object class="TransitionMarker" id="{444c5984-e5c6-4569-9fe6-3edcadd8b648}"/>
+    <object class="TransitionMarker" id="{2c5c7484-df98-4929-a6f9-83b07e0e29d8}"/>
+    <object class="TransitionMarker" id="{abe27cb0-a06b-4bf0-9d64-df4beb0eea5d}"/>
+    <object class="TransitionMarker" id="{f034007c-aa55-44ef-b860-210113133359}"/>
+    <object class="TransitionMarker" id="{ac027328-ea26-45a0-8dcc-89531329f489}"/>
+    <object class="TransitionMarker" id="{66a43b5a-be39-475b-8b53-9d00a0b4ce0a}"/>
+    <object class="TransitionMarker" id="{f0bec6d0-71c7-422e-8802-87202ab78898}"/>
+    <object class="MixerBusEffectChain" id="{555576e7-b8a6-4012-92b0-4c3ba928f33e}"/>
+    <object class="MixerBusPanner" id="{7ea340e2-e5be-4bae-b190-2400208256ef}"/>
+    <object class="MixerBusFader" id="{6871b00f-3831-4ce7-9a26-61addc53421b}"/>
+    <object class="MixerBusEffectChain" id="{21e5e260-4cb3-407f-9d9d-0abb193ffe0c}"/>
+    <object class="MixerBusPanner" id="{9c874142-7502-40c4-858c-ffa471c1d552}"/>
+    <object class="ParameterCondition" id="{68ee0aa4-540a-4edb-96ff-3d25606c27a9}"/>
+    <object class="ParameterCondition" id="{20cdee72-8416-4c93-822b-6b90a077dc9d}"/>
+    <object class="ParameterCondition" id="{ac4a190e-ccc1-4b10-be99-3b4d07f02433}"/>
+    <object class="ParameterCondition" id="{a46f2c74-e8f2-41b1-8fcc-d92bc5e667a4}"/>
+    <object class="ParameterCondition" id="{2a342aca-c044-4bdb-9ad4-a5f247f119e1}"/>
+    <object class="ParameterCondition" id="{8b20f52e-ca2c-4b87-b6dd-ee8524d508ef}"/>
+    <object class="TransitionTimeline" id="{96085712-de54-4728-b29b-6e34052b0527}"/>
+    <object class="ParameterCondition" id="{ef46a61a-0f4b-477b-bfb4-8694d3e5bc11}"/>
+    <object class="ParameterCondition" id="{92812d52-eeb0-4cf7-82e5-6c265efb34fa}"/>
+    <object class="ParameterCondition" id="{508225b5-1ca7-45d7-a6b5-2e240b7bfc18}"/>
+    <object class="MixerBusFader" id="{3256be06-978f-443b-8499-955d845bd9e9}"/>
+    <object class="SpatialiserEffect" id="{dfbe4502-7e1e-4a3b-953d-641b137162a4}"/>
+    <object class="MixerBusFader" id="{d43959b2-e41a-4374-9e60-e1ffb264c486}"/>
+</objects>

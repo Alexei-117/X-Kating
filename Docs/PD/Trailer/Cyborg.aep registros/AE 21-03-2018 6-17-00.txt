@@ -1,0 +1,12 @@
+El registro de procesamiento de Adobe After Effects v14.0 Windows 64 para el procesamiento del proyecto "Cyborg.aep"
+
+ se inició en 21/03/2018 a las 6:17:00
+
+  21/03/2018 6:17:00: Iniciando composición "cyborg".
+
+  Salida a: D:\WastedHorchata ART\TRAILER\ESCENAS\cyborg.avi    21/03/2018 6:17:30: Composición finalizada "cyborg".
+
+
+  Tiempo total transc.: 30 segundos
+Registro cerrado en 21/03/2018 a las 6:17:30
+

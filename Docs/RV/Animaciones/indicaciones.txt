@@ -1,0 +1,6 @@
+LanzarItemMovimiento: en cuanto termina, se tiene que iniciar Correr en bucle a no ser que no haya acción.
+Idle: en bucle a no ser que haya acción.
+CharSelect: en bucle para la pantalla de selección.
+Choque: en cuanto termina, se tiene que iniciar correr en bucle a no ser que no haya acción.
+Derrape: en bucle mientras derrapa, cuando deja de pulsar el botón de derrape empieza de nuevo Correr aunque 
+Derrape no haya terminado.

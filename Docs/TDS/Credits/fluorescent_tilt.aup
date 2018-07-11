@@ -1,0 +1,25 @@
+<?xml version="1.0" standalone="no" ?>
+<!DOCTYPE project PUBLIC "-//audacityproject-1.3.0//DTD//EN" "http://audacity.sourceforge.net/xml/audacityproject-1.3.0.dtd" >
+<project xmlns="http://audacity.sourceforge.net/xml/" projname="fluorescent_tilt_data" version="1.3.0" audacityversion="2.1.0" sel0="1.0609906043" sel1="1.0609906043" vpos="0" h="0.0000000000" zoom="71.6311715605" rate="44100.0" snapto="off" selectionformat="hh:mm:ss + milliseconds">
+	<tags/>
+	<wavetrack name="259733__yoh__bad-fluorescent-lamp-clicks" channel="0" linked="1" mute="0" solo="0" height="150" minimized="0" isSelected="1" rate="44100" gain="1.0" pan="0.0">
+		<waveclip offset="0.00000000">
+			<sequence maxsamples="262144" sampleformat="262159" numsamples="46790">
+				<waveblock start="0">
+					<simpleblockfile filename="e00002c5.au" len="46790" min="-0.23316" max="0.244789" rms="0.036828"/>
+				</waveblock>
+			</sequence>
+			<envelope numpoints="0"/>
+		</waveclip>
+	</wavetrack>
+	<wavetrack name="259733__yoh__bad-fluorescent-lamp-clicks" channel="1" linked="0" mute="0" solo="0" height="150" minimized="0" isSelected="1" rate="44100" gain="1.0" pan="0.0">
+		<waveclip offset="0.00000000">
+			<sequence maxsamples="262144" sampleformat="262159" numsamples="46790">
+				<waveblock start="0">
+					<simpleblockfile filename="e000034f.au" len="46790" min="-0.247743" max="0.28473" rms="0.040112"/>
+				</waveblock>
+			</sequence>
+			<envelope numpoints="0"/>
+		</waveclip>
+	</wavetrack>
+</project>

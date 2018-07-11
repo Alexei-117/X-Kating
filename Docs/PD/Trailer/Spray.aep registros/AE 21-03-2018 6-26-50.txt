@@ -1,0 +1,12 @@
+El registro de procesamiento de Adobe After Effects v14.0 Windows 64 para el procesamiento del proyecto "Spray.aep"
+
+ se inició en 21/03/2018 a las 6:26:50
+
+  21/03/2018 6:26:50: Iniciando composición "IMG_9209".
+
+  Salida a: D:\WastedHorchata ART\TRAILER\ESCENAS\spray.avi    21/03/2018 6:27:38: Composición finalizada "IMG_9209".
+
+
+  Tiempo total transc.: 48 segundos
+Registro cerrado en 21/03/2018 a las 6:27:38
+

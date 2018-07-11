@@ -1,0 +1,75 @@
+<?xml version="1.0" standalone="no" ?>
+<!DOCTYPE project PUBLIC "-//audacityproject-1.3.0//DTD//EN" "http://audacity.sourceforge.net/xml/audacityproject-1.3.0.dtd" >
+<project xmlns="http://audacity.sourceforge.net/xml/" projname="rollerblade_doppler_data" version="1.3.0" audacityversion="2.1.0" sel0="0.1973696145" sel1="0.1973696145" vpos="0" h="0.0000000000" zoom="344.5312500000" rate="96000.0" snapto="off" selectionformat="hh:mm:ss + milliseconds">
+	<tags/>
+	<wavetrack name="376517__cribbler__spinning-bearing" channel="0" linked="1" mute="0" solo="0" height="150" minimized="0" isSelected="0" rate="96000" gain="1.0" pan="-1.0">
+		<waveclip offset="0.00000000">
+			<sequence maxsamples="262144" sampleformat="262159" numsamples="102539">
+				<waveblock start="0">
+					<simpleblockfile filename="e0000ffd.au" len="102539" min="-0.035939" max="0.027743" rms="0.005741"/>
+				</waveblock>
+			</sequence>
+			<envelope numpoints="5">
+				<controlpoint t="0.005804988662" val="0.000000100000"/>
+				<controlpoint t="0.031927437642" val="0.069444417953"/>
+				<controlpoint t="0.084172335601" val="0.250000000000"/>
+				<controlpoint t="0.148027210884" val="0.416666686535"/>
+				<controlpoint t="0.258321995465" val="1.000000000000"/>
+			</envelope>
+		</waveclip>
+	</wavetrack>
+	<wavetrack name="376517__cribbler__spinning-bearing" channel="1" linked="0" mute="0" solo="0" height="150" minimized="0" isSelected="0" rate="96000" gain="1.0" pan="-1.0">
+		<waveclip offset="0.00000000">
+			<sequence maxsamples="262144" sampleformat="262159" numsamples="102539">
+				<waveblock start="0">
+					<simpleblockfile filename="e0000590.au" len="102539" min="-0.02689" max="0.031077" rms="0.005758"/>
+				</waveblock>
+			</sequence>
+			<envelope numpoints="5">
+				<controlpoint t="0.005804988662" val="0.000000100000"/>
+				<controlpoint t="0.031927437642" val="0.069444417953"/>
+				<controlpoint t="0.084172335601" val="0.250000000000"/>
+				<controlpoint t="0.148027210884" val="0.416666686535"/>
+				<controlpoint t="0.258321995465" val="1.000000000000"/>
+			</envelope>
+		</waveclip>
+	</wavetrack>
+	<wavetrack name="376517__cribbler__spinning-bearing" channel="0" linked="1" mute="0" solo="0" height="150" minimized="0" isSelected="0" rate="96000" gain="1.0" pan="1.0">
+		<waveclip offset="0.00000000">
+			<sequence maxsamples="262144" sampleformat="262159" numsamples="42353">
+				<waveblock start="0">
+					<simpleblockfile filename="e0000148.au" len="42353" min="-0.035939" max="0.027743" rms="0.005536"/>
+				</waveblock>
+			</sequence>
+			<envelope numpoints="8">
+				<controlpoint t="0.000005000000" val="1.000000000000"/>
+				<controlpoint t="0.206077097506" val="1.000000000000"/>
+				<controlpoint t="0.261224489796" val="0.652777791023"/>
+				<controlpoint t="0.307664399093" val="0.458333313465"/>
+				<controlpoint t="0.336689342404" val="0.416666686535"/>
+				<controlpoint t="0.380226757370" val="0.194444417953"/>
+				<controlpoint t="0.400544217687" val="0.152777791023"/>
+				<controlpoint t="0.441172083333" val="0.000000100000"/>
+			</envelope>
+		</waveclip>
+	</wavetrack>
+	<wavetrack name="376517__cribbler__spinning-bearing" channel="1" linked="0" mute="0" solo="0" height="150" minimized="0" isSelected="0" rate="96000" gain="1.0" pan="1.0">
+		<waveclip offset="0.00000000">
+			<sequence maxsamples="262144" sampleformat="262159" numsamples="42353">
+				<waveblock start="0">
+					<simpleblockfile filename="e0000c51.au" len="42353" min="-0.02689" max="0.031077" rms="0.005552"/>
+				</waveblock>
+			</sequence>
+			<envelope numpoints="8">
+				<controlpoint t="0.000005000000" val="1.000000000000"/>
+				<controlpoint t="0.206077097506" val="1.000000000000"/>
+				<controlpoint t="0.261224489796" val="0.652777791023"/>
+				<controlpoint t="0.307664399093" val="0.458333313465"/>
+				<controlpoint t="0.336689342404" val="0.416666686535"/>
+				<controlpoint t="0.380226757370" val="0.194444417953"/>
+				<controlpoint t="0.400544217687" val="0.152777791023"/>
+				<controlpoint t="0.441172083333" val="0.000000100000"/>
+			</envelope>
+		</waveclip>
+	</wavetrack>
+</project>

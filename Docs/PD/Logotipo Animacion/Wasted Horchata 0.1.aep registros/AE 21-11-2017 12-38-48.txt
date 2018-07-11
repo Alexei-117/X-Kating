@@ -1,0 +1,12 @@
+El registro de procesamiento de Adobe After Effects v14.0 Windows 64 para el procesamiento del proyecto "Wasted Horchata 0.1.aep"
+
+ se inició en 21/11/2017 a las 12:38:48
+
+  21/11/2017 12:38:48: Iniciando composición "Animación Logo".
+
+  Salida a: D:\Google Drive\CUATRIMESTRE I\PD\Animación Logo.avi  Advertencia de After Effects: Error al escribir metadatos XMP  21/11/2017 12:40:56: Composición finalizada "Animación Logo".
+
+
+  Tiempo total transc.: 2 min, 3 s
+Registro cerrado en 21/11/2017 a las 12:40:57
+

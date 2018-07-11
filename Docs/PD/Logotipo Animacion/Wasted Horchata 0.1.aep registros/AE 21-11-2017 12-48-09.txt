@@ -1,0 +1,12 @@
+El registro de procesamiento de Adobe After Effects v14.0 Windows 64 para el procesamiento del proyecto "Wasted Horchata 0.1.aep"
+
+ se inició en 21/11/2017 a las 12:48:09
+
+  21/11/2017 12:48:09: Iniciando composición "Animación Logo".
+
+  Salida a: D:\Documentos\Animación Logo.avi      Procesamiento detenido por el usuario.    21/11/2017 12:48:39: Composición finalizada "Animación Logo".
+
+
+  Tiempo total transc.: 24 segundos
+Registro cerrado en 21/11/2017 a las 12:48:39
+
