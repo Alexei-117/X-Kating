@@ -33,11 +33,11 @@ mac: create_dir make_src make_fac all_mac
 create_dir: make_bin_dir make_obj_dir
 
 make_bin_dir:
-	$(warning Creating bin directory... (if it doesn't exist))
+	$(warning Creating bin directory... if it doesn't exist)
 	$(MKDIR_P) $(BIN_PATH)
 
 make_obj_dir:
-	$(warning Creating obj directory... (if it doesn't exist))
+	$(warning Creating obj directory... if it doesn't exist)
 	$(MKDIR_P) $(BIN_PATH)$(OBJ_PATH)
 
 #Makes to execute

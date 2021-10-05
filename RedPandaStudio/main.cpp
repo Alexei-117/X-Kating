@@ -46,7 +46,7 @@ int main() {
                     glm::vec4(0.2,0.2,0.6,1), glm::vec4(1,1,1,1), 0.01);
 
     //Sparks
-    TNode* temitter1 = rps->createEmitter(rps->getSceneRoot(), "media/particle.obj", glm::vec3(5,0,0), 0.01, 200, 0.5, 
+    TNode* temitter1 = rps->createEmitter(rps->getSceneRoot(), "media/particle.obj", glm::vec3(5,0,0), 0.01, 200, 0.5,
                     glm::vec3(0,0.02,0.02), glm::vec3(0,0.04,0.04), 0.1,
                     0.02, 0.01, 0.5,
                     glm::vec4(1,1,0,1), glm::vec4(1,0,0,0.5), 0.1);
@@ -121,9 +121,7 @@ int main() {
         {
              i = 0;
         }
-
     }
-
     rps->dropDevice();
 
     std::cout << "Thanks for trying RedPandaStudio Engine!" << std::endl;
@@ -131,5 +129,4 @@ int main() {
     std::cout << std::endl;
 
     return 0;
-
 }

@@ -9,8 +9,8 @@
 //--------------------------------------
 
 //Updates all linear variables 
-void LAPAL::updateLinearVelocity(LAPAL::movementData& mData, const float dTime, const LAPAL::plane3f& terrain) {
-
+void LAPAL::updateLinearVelocity(LAPAL::movementData& mData, const float dTime, const LAPAL::plane3f& terrain)
+{
     //The approach is that we define a base acceleration for every object and it does not change when it reaches the max acceleration
     //then, we calculate how the different forces affect the acceleration and, therefore, the velocity
 
@@ -22,7 +22,7 @@ void LAPAL::updateLinearVelocity(LAPAL::movementData& mData, const float dTime, 
     //BASE ACCELERATION
     mData.acc += mData.dAcc*dTime; //increment of acceleration * increment of time
 
-    //Aply friction
+    //Apply friction
     if(!mData.mov) {
         if(mData.acc>0) {
             mData.acc -= (mData.brake_acc)*dTime;  
@@ -95,6 +95,7 @@ void LAPAL::updateVelocity(LAPAL::movementData& mData, LAPAL::plane3f& terrain){
             mData.velocity.z *= (2-cos(terrain.rotZ));
         }
     }
+
     if(mData.coll)
         mData.velocity = glm::vec3(0,0,0);
 }
@@ -127,8 +128,8 @@ void LAPAL::updateSpin(LAPAL::movementData& mData, const float dTime){
 }
 
 //Updates rotation of the vehicle to match the terrain's. Do it smoothly.
-void LAPAL::updateRotation(LAPAL::movementData& mData, LAPAL::plane3f& terrain, const float dTime){
-
+void LAPAL::updateRotation(LAPAL::movementData& mData, LAPAL::plane3f& terrain, const float dTime)
+{
     //Increasing rotation axis in mData until it matches the terrain. Incremental turn.
     //X axis.
     if(glm::abs(mData.angX - terrain.rotX)<0.05f){
@@ -169,13 +170,14 @@ void LAPAL::updateRotation(LAPAL::movementData& mData, LAPAL::plane3f& terrain, 
             mData.angZ -= mData.rotateZ*dTime;
         }
     }
-
 }
 
 //Function that moves the vehicle elliptically given its internal radius ratio rotation
-void LAPAL::updateEllipticMovement( LAPAL::movementData& mData, const float dTime){
+void LAPAL::updateEllipticMovement( LAPAL::movementData& mData, const float dTime)
+{
     //Check if drifting is pressed
-    if(mData.drift){ 
+    if(mData.drift)
+    {
         //Initial variables
         mData.driftAngleIncr   += dTime;                    //Augment drifting angle increment
         if(mData.driftAngleIncr > mData.driftAngleIncrMax)
@@ -184,9 +186,11 @@ void LAPAL::updateEllipticMovement( LAPAL::movementData& mData, const float dTim
         mData.driftTimeCounter += dTime;                    //Time drifting
 
         //if true, drift going left and NPC was right
-        if(mData.driftDir == 1.0f){
+        if(mData.driftDir == 1.0f)
+        {
             //if spin is going in the same direction as when it began (right)
-            if(mData.spin_inc < 0){
+            if(mData.spin_inc < 0)
+            {
                 mData.angle  -= dTime*mData.driftAngleIncr;
             }
 
@@ -198,7 +202,8 @@ void LAPAL::updateEllipticMovement( LAPAL::movementData& mData, const float dTim
             }
 
             //When turning to initial angle position, turn at a 1/4 of the turning speed
-            if(mData.spin_inc > 0){
+            if(mData.spin_inc > 0)
+            {
                 mData.angle  += dTime*mData.driftAngleIncr*0.25;
                 if(mData.angle > mData.driftWallAngle)
                     mData.angle = mData.driftWallAngle;
@@ -215,13 +220,14 @@ void LAPAL::updateEllipticMovement( LAPAL::movementData& mData, const float dTim
                 mData.velocity.x += mData.vel*cos(mData.angle + mData.driftDesplaceAngle);
                 mData.velocity.z += mData.vel*sin(mData.angle + mData.driftDesplaceAngle)/2;
             }
-
         }
 
         //if true drift is going right and NPC was left
-        if(mData.driftDir == -1.f){
+        if(mData.driftDir == -1.f)
+        {
             //if spin is positive, it is going in the same direction as when it began ( left)
-            if(mData.spin_inc > 0){
+            if(mData.spin_inc > 0)
+            {
                 mData.angle  += dTime*mData.driftAngleIncr;
             }
             
@@ -233,7 +239,8 @@ void LAPAL::updateEllipticMovement( LAPAL::movementData& mData, const float dTim
             }
 
             //When turning to initial angle position, turn at a 1/4 of the turning speed
-            if(mData.spin_inc < 0){
+            if(mData.spin_inc < 0)
+            {
                 mData.angle  -= dTime*mData.driftAngleIncr*0.25;
                 if(mData.angle < mData.driftWallAngle)
                     mData.angle = mData.driftWallAngle;
@@ -265,13 +272,13 @@ void LAPAL::updateEllipticMovement( LAPAL::movementData& mData, const float dTim
 }
 
 //Updates the deviation in velocity caused by a collision
-void LAPAL::updateCollisionMovement ( LAPAL::movementData& mData, const float dTime) {
-
+void LAPAL::updateCollisionMovement ( LAPAL::movementData& mData, const float dTime)
+{
     const float cons = 5; //factor of vel reduction over time
     const float min = 0.03; //minimum velocity of colVel
 
-    if(abs(mData.colVel.x) > min || abs(mData.colVel.z) > min) {
-
+    if(abs(mData.colVel.x) > min || abs(mData.colVel.z) > min)
+    {
         mData.velocity.x += mData.colVel.x*2;
         mData.velocity.z += mData.colVel.z*2;
 
@@ -279,19 +286,19 @@ void LAPAL::updateCollisionMovement ( LAPAL::movementData& mData, const float dT
         mData.colVel.z -= mData.colVel.z*dTime*cons;
         mData.invul = false;
     }
-    else{
+    else
+    {
         mData.colVel = { 0, 0, 0};
     }
-
 }
-
 
 //--------------------------------------
 //-------------COLLISIONS---------------
 //--------------------------------------
 
 //Checks 3D collision between circles
-bool LAPAL::checkCircleCircleCollision(const LAPAL::vec3f& pos1,const float& radius1, const float& length1, const LAPAL::vec3f& pos2,const float& radius2, const float& length2) {
+bool LAPAL::checkCircleCircleCollision(const LAPAL::vec3f& pos1,const float& radius1, const float& length1, const LAPAL::vec3f& pos2,const float& radius2, const float& length2)
+{
     if ( ( pos2.x-pos1.x ) * ( pos2.x-pos1.x )  + ( pos2.z-pos1.z ) * ( pos2.z-pos1.z ) < ( radius1 + radius2 ) * ( radius1 + radius2) ) // = (x² + z²)<tRadius²
         if( abs(pos2.y-pos1.y) < (length1 + length2) )
             return true;
@@ -301,8 +308,8 @@ bool LAPAL::checkCircleCircleCollision(const LAPAL::vec3f& pos1,const float& rad
 
 //Assuming there's collision, changes velocity of every object after collision
 void LAPAL::calculateElasticCollision(LAPAL::vec3f& vel1, const LAPAL::vec3f& pos1, const float& mass1, 
-                                        LAPAL::vec3f& vel2, const LAPAL::vec3f& pos2, const float& mass2) {
-
+                                        LAPAL::vec3f& vel2, const LAPAL::vec3f& pos2, const float& mass2)
+{
     //We apply the physical elastic collision formula
     /*
                 2⋅m2     ⟨v1−v2,x1−x2⟩                           2⋅m1    ⟨v2−v1,x2−x1⟩
@@ -319,24 +326,23 @@ void LAPAL::calculateElasticCollision(LAPAL::vec3f& vel1, const LAPAL::vec3f& po
     auxVel = vel2 - vel1;
     auxPos.y = 0;
     vel2 = vel2 - ((2 * mass1) / (mass1 + mass2)) * ( (auxPos.x*auxVel.x + auxPos.z*auxVel.z) / (auxPos.x * auxPos.x + auxPos.z + auxPos.z)) * auxPos;
-
 }
 
 //Checks if terrain is horizontal o it's a pendent 
-bool LAPAL::checkTerrain(const LAPAL::plane3f& terrain){
-
-    bool state=false;
-
-   if(terrain.p1.y == terrain.p2.y && terrain.p1.y == terrain.p3.y && terrain.p1.y == terrain.p4.y){ 
-        state=true; //the plane is horizontal
+bool LAPAL::checkTerrain(const LAPAL::plane3f& terrain)
+{
+    bool state = false;
+    if(terrain.p1.y == terrain.p2.y && terrain.p1.y == terrain.p3.y && terrain.p1.y == terrain.p4.y)
+    {
+        state = true; //the plane is horizontal
     }
 
     return state;
 }
 
 //Calculates rotation in X and Z of the plane, assigning the value to rotZ and rotX
-void LAPAL::calculateRotationsXZ(LAPAL::plane3f& terrain){
-    
+void LAPAL::calculateRotationsXZ(LAPAL::plane3f& terrain)
+{
     //Calculate terrain normal
     LAPAL::vec3f v1 = terrain.p2 - terrain.p1;
     LAPAL::vec3f v2 = terrain.p3 - terrain.p1;
@@ -361,14 +367,17 @@ void LAPAL::calculateRotationsXZ(LAPAL::plane3f& terrain){
     auto lZ = pZ-p0;
     float cosZ = lZ.z / sqrt(lZ.x*lZ.x + lZ.y*lZ.y + lZ.z*lZ.z);
     terrain.rotX = acos(cosZ);
-
 }
 
 //Calculates expected Y for the object given its position
-float LAPAL::calculateExpectedY(const LAPAL::plane3f& terrain, const LAPAL::vec3f& position ){
-    if(checkTerrain(terrain)){
+float LAPAL::calculateExpectedY(const LAPAL::plane3f& terrain, const LAPAL::vec3f& position )
+{
+    if(checkTerrain(terrain))
+    {
         return terrain.p1.y;
-    }else{
+    }
+    else
+    {
         //Scalars that determine the position Y of the object given the vectors needed to compose its position in X and Z
         float a = 0.f, b = 0.f;
 
@@ -381,12 +390,15 @@ float LAPAL::calculateExpectedY(const LAPAL::plane3f& terrain, const LAPAL::vec3
 }
 
 //Corrects position of the object on Y
-void LAPAL::correctYPosition(LAPAL::movementData& mData, const float dTime, LAPAL::plane3f& terrain, LAPAL::vec3f& position){
+void LAPAL::correctYPosition(LAPAL::movementData& mData, const float dTime, LAPAL::plane3f& terrain, LAPAL::vec3f& position)
+{
     float y = calculateExpectedY(terrain, position);
     
-    if(!mData.asc){
+    if(!mData.asc)
+    {
         //check if we are not touching the ground
-        if(position.y>y){
+        if(position.y>y)
+        {
              
             //update vertical speed with gravity
             mData.velY += gravity*dTime*mData.velY*0.05;
@@ -404,7 +416,9 @@ void LAPAL::correctYPosition(LAPAL::movementData& mData, const float dTime, LAPA
             if(mData.velY > gravity * 20)
                 mData.velY = gravity * 20;
         
-        }else{
+        }
+        else
+        {
             position.y = y;
         }
     }
@@ -412,8 +426,8 @@ void LAPAL::correctYPosition(LAPAL::movementData& mData, const float dTime, LAPA
 }
 
 //Reflects the velocity given a line
-void LAPAL::calculateReflectedVector(LAPAL::vec3f& vel, const LAPAL::vec3f& p1, const LAPAL::vec3f& p2) {
-
+void LAPAL::calculateReflectedVector(LAPAL::vec3f& vel, const LAPAL::vec3f& p1, const LAPAL::vec3f& p2)
+{
     LAPAL::vec3f lineVector = p2-p1;
     LAPAL::vec3f normal = glm::vec3(-lineVector.z, 0, lineVector.x);    //Get normal from the two points of the line
 
@@ -425,7 +439,6 @@ void LAPAL::calculateReflectedVector(LAPAL::vec3f& vel, const LAPAL::vec3f& p1, 
 
     vel.x = vel.x - 2 * dotVelNormal * normal.x;
     vel.z = vel.z - 2 * dotVelNormal * normal.z;
-
 }
 
 //--------------------------------------
@@ -433,7 +446,8 @@ void LAPAL::calculateReflectedVector(LAPAL::vec3f& vel, const LAPAL::vec3f& p1, 
 //--------------------------------------
 
 //Calculates values A and B which are the scalars that multiply vector 1 and 2 to compose the point C in 2D (X-Z plane) inside the terrain givenç
-void LAPAL::calculateAB(const LAPAL::vec3f& vecC, const LAPAL::vec3f& vec1, const LAPAL::vec3f& vec2,  float& a, float& b){
+void LAPAL::calculateAB(const LAPAL::vec3f& vecC, const LAPAL::vec3f& vec1, const LAPAL::vec3f& vec2,  float& a, float& b)
+{
     double a_x = vec2.x;
     double a_z = vec2.z;
     double b_x = vec1.x;
@@ -442,8 +456,7 @@ void LAPAL::calculateAB(const LAPAL::vec3f& vecC, const LAPAL::vec3f& vec1, cons
     double c_z = vecC.z;
     double aux_a = 0;
     double aux_b = 0;
-    
- 
+
     //Composing vectors a * vec1 +  b * vec2 = vecC
     if(b_x * a_z != b_z * a_x){
         aux_a = (c_z * a_x - c_x * a_z) / (b_z * a_x - b_x * a_z);
@@ -461,8 +474,8 @@ void LAPAL::calculateAB(const LAPAL::vec3f& vecC, const LAPAL::vec3f& vec1, cons
 
 
 //Calculates values A and B in given terrain, using Cross vectors (from p1 to p3 and from p2 to p4 OR down-left to up-right and up-left to down-right)
-void LAPAL::calculateTerrainAB(const LAPAL::plane3f& terrain, const LAPAL::vec3f& position, float& a, float& b){
-
+void LAPAL::calculateTerrainAB(const LAPAL::plane3f& terrain, const LAPAL::vec3f& position, float& a, float& b)
+{
     //Vector that will compose the position inside the terrain
     glm::vec3 vec_a     =   terrain.p3 - terrain.p1;
     glm::vec3 vec_b     =   terrain.p4 - terrain.p2;
@@ -473,25 +486,22 @@ void LAPAL::calculateTerrainAB(const LAPAL::plane3f& terrain, const LAPAL::vec3f
 }
 
 //Calculates the distance between a line defined by two points (l1,l2) and a point (p1)
-float LAPAL::distance2DLinePoint(const LAPAL::vec3f& l1, const LAPAL::vec3f& l2, const LAPAL::vec3f& p1) {
-
+float LAPAL::distance2DLinePoint(const LAPAL::vec3f& l1, const LAPAL::vec3f& l2, const LAPAL::vec3f& p1)
+{
     LAPAL::vec3f lineVec = l2-l1;
     LAPAL::vec3f circVec = l2-p1;
 
     float lineVecMod = sqrt(lineVec.x*lineVec.x + lineVec.z*lineVec.z);
     float circVecMod = sqrt(circVec.x*circVec.x + circVec.z*circVec.z);
-
     float vectorCos = (lineVec.x*circVec.x + lineVec.z*circVec.z)/(lineVecMod*circVecMod);
-
     float distance = vectorCos*circVecMod;
 
     return distance;
-
 }
 
 //Calculates if a point (p1) is left o right of a line defined by two points (l1,l2)
-bool LAPAL::position2DLinePoint(const LAPAL::vec3f& l1, const LAPAL::vec3f& l2, const LAPAL::vec3f& p1) {
-
+bool LAPAL::position2DLinePoint(const LAPAL::vec3f& l1, const LAPAL::vec3f& l2, const LAPAL::vec3f& p1)
+{
     //We use a formula infered from the equation of the line (A * x + B * y + C = 0)
     float A = -( l2.z - l1.z );
     float B = l2.x - l1.x;
@@ -503,12 +513,11 @@ bool LAPAL::position2DLinePoint(const LAPAL::vec3f& l1, const LAPAL::vec3f& l2, 
         return false;   // p1 is left of the line
     else 
         return true;    // p1 is right of the line (or in the line)
-
 }
 
 //Calculates if a circle is inside a rectangle
-bool LAPAL::checkCircleRectangleCollision(const LAPAL::plane3f& terrain, const LAPAL::vec3f& nextPosition, const float length, const float length2) {
-
+bool LAPAL::checkCircleRectangleCollision(const LAPAL::plane3f& terrain, const LAPAL::vec3f& nextPosition, const float length, const float length2)
+{
     if( abs(LAPAL::calculateExpectedY(terrain, nextPosition)-nextPosition.y)-((length + length2)/2) > 1)
         return false;
 
@@ -523,7 +532,6 @@ bool LAPAL::checkCircleRectangleCollision(const LAPAL::plane3f& terrain, const L
         return false;
 
     return true;
-
 }
 
 //calculate angle a-b and a-c
